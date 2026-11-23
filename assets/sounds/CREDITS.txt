@@ -1,0 +1,16 @@
+These sound effects are downloaded from Freesound and published under CC0 1.0.
+No attribution is legally required by CC0; source details are recorded here.
+
+Page turn:
+Title: Book Turn Page 1.wav
+Creator: esperri
+Source: https://freesound.org/people/esperri/sounds/119126/
+License: https://creativecommons.org/publicdomain/zero/1.0/
+Local file: page-flip.mp3 (Freesound MP3 preview)
+
+Cat meow:
+Title: cat meow short
+Creator: skymary
+Source: https://freesound.org/people/skymary/sounds/412017/
+License: https://creativecommons.org/publicdomain/zero/1.0/
+Local file: meow.mp3 (Freesound MP3 preview)

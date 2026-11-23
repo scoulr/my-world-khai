@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#09090d">
+  <meta name="description" content="A little love letter for Khai.">
+  <title>A little love letter</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main>
+    <div class="music-control" id="music-control" hidden>
+      <button class="music-button" id="play-music" type="button" aria-label="Play music">♫ <span>play our song</span></button>
+      <span class="music-note" id="music-note" role="status"></span>
+    </div>
+    <section class="scene opening music-intro-active" id="opening" aria-labelledby="opening-title">
+      <div class="music-intro" id="music-intro">
+        <p class="intro-line intro-line-first">Hey, baby</p>
+        <p class="intro-line intro-line-second">Hope you like it, sayang</p>
+        <div class="intro-play-wrap">
+          <p class="intro-play-label">Play song ♡</p>
+          <button class="intro-play-button" id="intro-play" type="button" aria-label="Play song">♫</button>
+          <span class="intro-play-status" id="intro-play-status" role="status"></span>
+        </div>
+      </div>
+      <div class="terminal-frame">
+        <p class="eyebrow" id="opening-title">a little garden, just for you</p>
+        <div class="bouquet" aria-label="A pixelated ASCII bouquet of nine flowers slowly blooming">
+          <div class="flower-garden" id="flower-garden"></div>
+          <pre class="bouquet-ribbon" aria-hidden="true">      \\\\\\  |  //////</pre>
+        </div>
+        <p class="opening-caption" id="opening-caption">waiting for the first little bloom…</p>
+        <button class="next-button opening-next" id="opening-next" type="button" hidden>Continue <span aria-hidden="true">　→</span></button>
+      </div>
+    </section>
+
+    <section class="scene letter-scene hidden" id="letter-scene" aria-label="A three-page love letter">
+      <div class="petals" aria-hidden="true"></div>
+      <article class="letter-paper" id="letter-paper" aria-live="polite">
+        <p class="letter-kicker" id="letter-kicker">a little note for you</p>
+        <div class="letter-copy" id="letter-copy"></div>
+        <div class="letter-footer">
+          <button class="next-button back-button" id="letter-back" type="button">← <span id="back-label">Back</span></button>
+          <span class="page-count" id="page-count"></span>
+          <button class="next-button" id="next-page" type="button">
+            <span id="next-label">Turn the page</span><span aria-hidden="true">　→</span>
+          </button>
+        </div>
+      </article>
+    </section>
+
+    <section class="scene memories hidden" id="memories" aria-label="Our memories">
+      <div class="petals" aria-hidden="true"></div>
+      <div class="polaroids">
+        <figure class="polaroid polaroid-one">
+          <img src="photos/seonghyeon%201.jpg" alt="Imported photograph one" loading="eager">
+          <figcaption>Love of my life</figcaption>
+        </figure>
+        <figure class="polaroid polaroid-two">
+          <img src="photos/seonghyeon%202.jpg" alt="Imported photograph two" loading="eager">
+          <figcaption>The one who I adore</figcaption>
+        </figure>
+      </div>
+      <nav class="scene-navigation" aria-label="Photograph navigation">
+        <button class="next-button back-button" id="photos-back" type="button">← Back</button>
+        <button class="next-button memory-next" id="to-cat" type="button">Continue <span aria-hidden="true">　→</span></button>
+      </nav>
+    </section>
+
+    <section class="scene cat-scene hidden" id="cat-scene" aria-label="A message from a little cat">
+      <div class="petals" aria-hidden="true"></div>
+      <button class="next-button cat-back back-button" id="cat-back" type="button">← Back to photographs</button>
+      <div class="cat-stage">
+        <div class="speech-bubble" id="speech-bubble" role="status" aria-live="polite">I love you the most, sweetheart</div>
+        <button class="cat-button" id="cat-button" type="button" aria-label="Click the cat">
+          <svg class="cat-head" viewBox="0 0 220 190" role="img" aria-label="Cute black cartoon cat head">
+            <path class="cat-fur" d="M25 92 20 24l53 34c12-4 26-6 37-6s25 2 37 6l53-34-5 68c11 13 17 29 17 45 0 35-41 43-102 43S8 172 8 137c0-16 6-32 17-45Z"/>
+            <path class="inner-ear" d="m31 43 31 20-25 16Zm158 0-31 20 25 16Z"/>
+            <path class="eye" d="M61 112c0-11 7-18 15-18s14 7 14 18-6 17-14 17-15-6-15-17Zm69 0c0-11 6-18 14-18s15 7 15 18-7 17-15 17-14-6-14-17Z"/>
+            <path class="nose" d="m103 135 7-5 7 5-7 7Z"/>
+            <path class="mouth" d="M110 142v6m0 0c-5 7-12 8-17 2m17-2c5 7 12 8 17 2"/>
+            <path class="whiskers" d="m79 139-37-7m37 15-39 4m98-12 37-7m-37 15 39 4"/>
+            <circle class="blush" cx="70" cy="139" r="8"/><circle class="blush" cx="150" cy="139" r="8"/>
+          </svg>
+          <span class="click-label">click me</span>
+        </button>
+        <span class="cat-audio-note" id="cat-audio-note" role="status" hidden></span>
+      </div>
+    </section>
+  </main>
+  <audio id="song" preload="auto" src="song/Last%20Night%20on%20Earth.mp3" loop></audio>
+  <audio id="page-flip-audio" preload="none" src="assets/sounds/page-flip.mp3"></audio>
+  <audio id="miaw-audio" preload="none" src="assets/sounds/meow.mp3"></audio>
+  <script src="script.js"></script>
+</body>
+</html>
